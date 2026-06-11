@@ -21,7 +21,7 @@ const dev = {
   stack: [
     "React", "Next.js", "TypeScript", "Tailwind CSS",
     "Node.js", "Express", "PostgreSQL", "MongoDB",
-    "Docker", "AWS", "Git", "Figma",
+    "Docker", "AWS", "Git",
   ],
   experience: [
     {
@@ -80,7 +80,7 @@ type InterfaceProps = {
   title : string
 }
 
-const NAV = ["About", "Skills", "Experience", "Projects", "Contact"];
+const NAV = ["About", "Skills", "Projects", "Contact"];
 
 export default function App() {
   const [active, setActive] = useState("About");
@@ -167,9 +167,9 @@ export default function App() {
           {/* Stat pills */}
           <div className="grid grid-cols-3 gap-4 mt-12">
             {[
-              { label: "Years of experience", value: "6+" },
-              { label: "Projects shipped", value: "40+" },
-              { label: "Countries worked with", value: "8" },
+              { label: "Years of experience", value: "1+" },
+              { label: "Projects shipped", value: "1+" },
+              { label: "Countries worked with", value: "1" },
             ].map(({ label, value }) => (
               <div
                 key={label}
@@ -221,25 +221,11 @@ export default function App() {
           </div>
         </section>
 
-        {/* EXPERIENCE */}
-        <section id="experience">
-          <SectionHeading number="02" title="Experience" />
-          <ol className="mt-8 space-y-0 relative border-l border-zinc-800 ml-3">
-            {dev.experience.map((e, i) => (
-              <li key={i} className="pl-8 pb-10 last:pb-0 relative">
-                <span className="absolute -left-1.5 top-1.5 w-3 h-3 rounded-full bg-zinc-800 border border-zinc-600" />
-                <p className="text-xs font-mono text-zinc-600 mb-1">{e.period}</p>
-                <h3 className="font-semibold text-white">{e.role}</h3>
-                <p className="text-indigo-400 text-sm mb-2">{e.company}</p>
-                <p className="text-zinc-500 text-sm leading-relaxed">{e.desc}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
+
 
         {/* PROJECTS */}
         <section id="projects">
-          <SectionHeading number="03" title="Projects" />
+          <SectionHeading number="02" title="Projects" />
           <div className="grid md:grid-cols-2 gap-4 mt-8">
             {dev.projects.map((p) => (
               <div
@@ -274,7 +260,7 @@ export default function App() {
 
         {/* CONTACT */}
         <section id="contact">
-          <SectionHeading number="04" title="Contact" />
+          <SectionHeading number="03" title="Contact" />
           <div className="mt-8 bg-linear-to-br from-indigo-500/10 to-zinc-900 border border-indigo-500/20 rounded-2xl p-8 md:p-12 text-center">
             <h3 className="text-2xl font-bold text-white mb-2">
               Let's build something together
@@ -291,7 +277,7 @@ export default function App() {
                 {dev.email}
               </a>
               <a
-                href="#"
+                href="https://github.com/yohanbarbosa?tab=overview&from=2026-06-01&to=2026-06-10"
                 className="border border-zinc-700 hover:border-zinc-500 text-zinc-400 hover:text-zinc-200 transition-all font-medium px-6 py-2.5 rounded-lg text-sm"
               >
                 {dev.github}
